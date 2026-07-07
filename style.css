@@ -177,10 +177,12 @@ nav ul li a:hover::after{
 
 
 .hero-section{
-    margin: 4rem;
+    /* margin-left: 20rem; */
+    margin-top: 4rem;
+    backdrop-filter: blur(5px);
 }
 .highlight-text{
-    margin: 2rem,1rem,1rem,1rem;
+    margin-left: 30rem;
     backdrop-filter: blur (5px);
     background: #09946148;
     border: 1px solid var(--Mint);
@@ -198,27 +200,69 @@ nav ul li a:hover::after{
 .hdr1{
  color: var(--Off-White);
  font-family: "Noto Sans Bhaiksuki";
- font-size: 5rem;
+ font-size: 3rem;
  animation: slideIn 1.5s  ease-in;
-}
-.hdr2{
-    color: var(--Emerald-green);
- font-family: "Noto Sans Bhaiksuki";
- font-size: 4.5rem;
- animation: slideRight 1.5s ease-in;
+ margin-left: 20rem;
+ margin-top: 2rem;
 }
 .subtle-ctn{
     padding: 1rem;
 }
 .subtle-text{
     color: var(--Off-White);
-    font-size: 1.5rem;
-    letter-spacing: 1.1;
-    line-height: 1.6;
-    font-family: "Source Sans 3";
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.9;
+    letter-spacing: 0.4px;
     animation: fadeIn 2s ease-in-out;
+    text-align: center;
+    font-family: "Outfit";
+   max-width:760px;
+   width:90%;
+   margin-left: 15rem;
+    
 }
+.ctn-btn{
+    display: flex;
+    gap: 2rem;
+    margin-left: 20rem;
+}
+.ctn1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Emerald-green);
+    color: var(--Off-White);
+    border: none;
+    border-radius: 0.4rem;
 
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-family: "Source Sans 3";
+    gap: 10px;
+
+
+    animation: slideIn 2s ease;
+}
+.ctn2{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+    background: #1118278e;
+    border: var(--Slate) 2px solid;
+    color: var(--Off-White);
+    border: none;
+    border-radius: 0.4rem;
+
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-family: "Source Sans 3";
+    gap: 10px;
+
+
+    animation: slideIn 2s ease;
+}
 @media screen and (max-width:768px){
     .hamburger{
         display: flex;
@@ -234,13 +278,13 @@ nav ul li a:hover::after{
     flex-direction: column;
     backdrop-filter: blur(15px);
     background-color: #111827;
-    border: #111827;
     gap: 0;
      max-height: 0; 
      overflow: hidden; 
     transition: max-height 0.3s ease;
- z-index: 9999;
- padding-top: 1rem;
+   z-index: 9999;
+   
+
   }
 
         
@@ -257,7 +301,7 @@ nav ul li a:hover::after{
 
   /* When menu has 'active' class, show it */
   .nav-menu.active {
-    max-height: 350px;
+    max-height: 1000px;
   }
 
   .hero-section{
@@ -267,38 +311,31 @@ nav ul li a:hover::after{
   .highlight-text{
     font-size: 0.5rem;
     margin-top: 4rem;
+    margin-left: 7rem;
   }
   .header-text{
     margin-top: 1rem ;
   }
   .hdr1{
-    font-size: 2.5rem;
+    font-size: 1.2rem;
+    margin-left: 0;
+    text-align: center;
   }
-  .hdr2{
-    font-size: 2.3rem;
+  .subtle-text{
+    margin-left: 0;
+    text-align: center;
+    font-size: 1rem;
+    max-width: fit-content;
   }
-  .subtle-ctn{
-    padding: 0;
+  .ctn-btn{
+    flex-direction: column;
+    margin-left: 0;
   }
 }
 
 
 
 
-/* @keyframes changeBg {
-    /* 0%{
-        background: 
-         linear-gradient(
-        rgba(0, 0, 0, 0.712),
-        rgba(0, 0, 0, 0.486)
-    ),
-        url(bg-phone.png);
-    }
-    100%{
-        background: url(bg-house.png);
-        
-    }
-} */ 
 
 @keyframes fadeBg{
 
