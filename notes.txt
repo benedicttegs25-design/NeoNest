@@ -1,0 +1,7 @@
+| Purpose    | Color         | Hex       |
+| ---------- | ------------- | --------- |
+| Primary    | Emerald Green | `#10B981` |
+| Dark       | Charcoal      | `#111827` |
+| Background | Off White     | `#F9FAFB` |
+| Text       | Slate         | `#374151` |
+| Accent     | Mint          | `#6EE7B7` |
