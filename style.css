@@ -225,7 +225,7 @@ nav ul li a:hover::after{
 .ctn-btn{
     display: flex;
     gap: 2rem;
-    margin-left: 20rem;
+    margin-left: 25rem;
 }
 .ctn1{
     display: flex;
@@ -243,6 +243,12 @@ nav ul li a:hover::after{
 
 
     animation: slideIn 2s ease;
+}
+.ctn1:hover{
+    background-color: #016141;
+    box-shadow: inset rgba(0, 0, 0, 0)  ;
+    transform: scale(1.1);
+    transition: .5s ease;
 }
 .ctn2{
      display: flex;
@@ -263,6 +269,14 @@ nav ul li a:hover::after{
 
     animation: slideIn 2s ease;
 }
+.ctn2:hover{
+    box-shadow: inset rgba(0, 0, 0, 0)  ;
+    transform: scale(1.1);
+    transition: .5s ease;
+    background: var(--Charcoal);
+    box-shadow: inset rgba(0, 0, 0, 0) 2px 4px 15px;
+}
+
 @media screen and (max-width:768px){
     .hamburger{
         display: flex;
