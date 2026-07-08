@@ -31,6 +31,7 @@ header{
     padding-bottom: 120px; */
     
     position: relative;
+     padding-top: 90px;
 
 }
 header::before{
@@ -60,11 +61,15 @@ header>*{
     justify-content: space-around;
     align-items: center;
     backdrop-filter: blur(10px);
-    /* position: sticky; */
+    position: fixed;
+     top: 0;
+    left: 0;
+    width: 100%;
     border-bottom: 1px #374151 solid;
     padding: 1rem;
     animation: fadeIn 1.5s ease-in-out;
     z-index: 9999;
+    background: #111827;
 }
 .brand-ctn{
     display: inline-flex;
@@ -137,7 +142,7 @@ nav ul li a:hover::after{
     animation: slideIn 2s ease;
 }
 .nav-btn:hover{
-    transform: translateY(-10px);
+    transform: scale( 1.05);
     transition: ease 1s;
     background-color: #016141;
 }
@@ -194,6 +199,7 @@ nav ul li a:hover::after{
     padding: .3rem;
     font-weight: 100;
     animation: slideUp 1.5s ease-out;
+    cursor: pointer;
 
 }
 
@@ -221,6 +227,11 @@ nav ul li a:hover::after{
    width:90%;
    margin-left: 15rem;
     
+}
+.subtle-text span{
+    color: var(--Mint);
+    font-family: "Source sans 3";
+    cursor: pointer;
 }
 .ctn-btn{
     display: flex;
@@ -277,6 +288,83 @@ nav ul li a:hover::after{
     box-shadow: inset rgba(0, 0, 0, 0) 2px 4px 15px;
 }
 
+
+/* COMPATIBILTY CTN */
+
+.compatibility{
+    background: #111827;
+    box-shadow: 20px 20px 20px 0 var(--Off-White);
+    border-radius: 2px;
+    padding: 1rem;
+}
+
+.security-icon{
+    color: var(--Emerald-green);
+    font-size: 2rem;
+    background: rgba(16,185,129,.08);
+    padding: 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(16,185,129,.2);
+    margin-left: 35rem;
+}
+.compatibility-tag{
+    margin-left: 32rem;
+    font-size: 1rem;
+    font-family: "Outfit";
+    font-weight: 300;
+  color: var(--Emerald-green);
+}
+.compatibility h2{
+    color: var(--Off-White);
+ font-family: "Noto Sans Bhaiksuki";
+ font-size: 2.56rem;
+ animation: slideIn 1.5s  ease-in;
+ margin-left: 27rem;
+ margin-top: 1rem;
+}
+.compatibility-text{
+     color:#eeeeeec4;
+    font-size: 1.15rem;
+    font-weight: 200;
+    line-height: 1.9;
+    letter-spacing: 0.4px;
+    animation: fadeIn 2s ease-in-out;
+    text-align: center;
+    font-family: "Outfit";
+   max-width:760px;
+   width:90%;
+   margin-left: 15rem;
+}
+.brand-logos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+.brand{
+    display: grid;
+    justify-content: center;
+    border: #374151 2px solid;
+    padding: 1rem;
+    color: var(--Off-White);
+    background: #03070e;
+    border-radius: 0.4rem;
+    width: 120px;
+    height: 120px;
+    border-bottom: #10B981 3px solid;
+    font-family: "Noto Sans Bhaiksuki";
+}
+.google-icon, .apple-icon, .alexa-icon,.matter-icon, .philip-icon , .smart-icon{
+    font-size: 4rem;
+    color: #10B981;
+}
+
+
+
+
+
 @media screen and (max-width:768px){
     .hamburger{
         display: flex;
@@ -330,12 +418,12 @@ nav ul li a:hover::after{
   .header-text{
     margin-top: 1rem ;
   }
-  .hdr1{
+  .hdr1,.compatibility h2{
     font-size: 1.2rem;
     margin-left: 0;
     text-align: center;
   }
-  .subtle-text{
+  .subtle-text,.compatibility-text{
     margin-left: 0;
     text-align: center;
     font-size: 1rem;
@@ -347,9 +435,21 @@ nav ul li a:hover::after{
   }
 }
 
+.security-icon{
+ margin-left: 13rem;
+}
+.compatibility-tag{
+    margin-left:0 ;
+    text-align: center;
+}
 
-
-
+.brand{
+    height: 100px;
+    width: 100px;
+}
+.google-icon, .apple-icon, .alexa-icon,.matter-icon, .philip-icon , .smart-icon{
+    font-size: 3rem;
+}
 
 @keyframes fadeBg{
 
