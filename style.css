@@ -433,9 +433,7 @@ nav ul li a:hover::after{
     flex-direction: column;
     margin-left: 0;
   }
-}
-
-.security-icon{
+  .security-icon{
  margin-left: 13rem;
 }
 .compatibility-tag{
@@ -450,6 +448,9 @@ nav ul li a:hover::after{
 .google-icon, .apple-icon, .alexa-icon,.matter-icon, .philip-icon , .smart-icon{
     font-size: 3rem;
 }
+}
+
+
 
 @keyframes fadeBg{
 
