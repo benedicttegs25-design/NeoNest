@@ -837,9 +837,13 @@ nav ul{
     margin:1rem 0;
 }
 
-.card-content1,
+.card-content1{
+    width:90%;
+    height:auto;
+    min-height:220px;
+}
 .card-content2{
-    width:95%;
+    width:90%;
     height:auto;
     min-height:220px;
 }
@@ -1111,7 +1115,53 @@ nav ul{
     font-size:2rem;
 }
 
+
+
+.first-hdr{
+    font-size:1.3rem;
 }
+
+.sec-hdr{
+    font-size:1.45rem;
+}
+
+.feature-txt{
+    font-size:.85rem;
+    line-height:1.7;
+}
+
+.card-content1,
+.card-content2{
+    min-height:200px;
+}
+
+.round-border{
+    width:40px;
+    height:40px;
+}
+
+.light-icon,
+.user-shield-icon{
+    font-size:1.5rem;
+    margin-top:.45rem;
+    margin-left:.55rem;
+}
+
+.text-ctn h2{
+    font-size:1.2rem;
+}
+
+.text-ctn h3{
+    font-size:.85rem;
+}
+
+.text-ctn p{
+    font-size:.8rem;
+}
+
+}
+
+
 
 
 /* SMALLER SCREEN SIZED PHONE 32OPX */
@@ -1192,6 +1242,54 @@ nav ul{
 .smart-icon{
     font-size:1.8rem;
 }
+
+.features{
+    padding:1rem .8rem;
+}
+
+.first-hdr{
+    font-size:1.15rem;
+}
+
+.sec-hdr{
+    font-size:1.3rem;
+}
+
+.feature-txt{
+    font-size:.8rem;
+}
+
+.card-content1,
+.card-content2{
+    padding:.8rem;
+    min-height:190px;
+}
+
+.round-border{
+    width:35px;
+    height:35px;
+}
+
+.light-icon,
+.user-shield-icon{
+    font-size:1.3rem;
+    margin-left:.45rem;
+    margin-top:.4rem;
+}
+
+.text-ctn h2{
+    font-size:1.1rem;
+}
+
+.text-ctn h3{
+    font-size:.8rem;
+}
+
+.text-ctn p{
+    font-size:.75rem;
+}
+
+
 
 }
 
