@@ -361,6 +361,11 @@ nav ul li a:hover::after{
     color: #10B981;
 }
 
+
+/* FEATURE SECTION */
+
+
+
 .features{
    background: url(features-bg.png);
     box-shadow: 20px 20px 20px 0 var(--Off-White);
@@ -405,7 +410,7 @@ nav ul li a:hover::after{
     gap : 10px;
 }
 
-.card-content1,.card-content2, .card-content3, .card-content4{
+.card{
     background-position: center;
     background-size: cover;
     padding: 1rem; 
@@ -414,6 +419,11 @@ nav ul li a:hover::after{
     color: var(--Off-White);
     width: 300px;
     height: 250px;
+}
+.card:hover{
+    transform: translateY(-10px);
+    background: #111827;
+    transition: .3s ease-in-out;
 }
 .card-content3{
     background: linear-gradient(rgba(0, 0, 1, 0.664), rgba(0, 0, 0, 0.397)) , url(https://media.istockphoto.com/id/1678741974/photo/mother-and-son-at-home-using-a-smart-thermostat.jpg?b=1&s=612x612&w=0&k=20&c=F-74yQ2TMoO8t30bte263fWEkOr9nvjWxRrM4S5ifmE=);
@@ -430,6 +440,7 @@ nav ul li a:hover::after{
 .card-content2{
     background: linear-gradient(rgba(0, 0, 1, 0.664), rgba(0, 0, 0, 0.397)) , url(https://plus.unsplash.com/premium_photo-1729436833449-225649403fc0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c21hcnQlMjBsb2NrfGVufDB8fDB8fHww);
 }
+
 .round-border{
     border: 2px solid var(--Emerald-green);
     border-radius: 50%;
@@ -479,6 +490,16 @@ nav ul li a:hover::after{
     font-family: "Source Sans 3";
     margin-top: 1rem;
     max-width: 330px;
+}
+
+
+/* SHOW CASE IMAGE */
+
+
+.showcase img{
+   width: 100%;
+   height: 120vh;
+
 }
 /* large screeen */
 
@@ -735,7 +756,9 @@ nav ul{
 .text-ctn p{
     font-size:.95rem;
 }
-
+.showcase img{
+    height: 60vh;
+}
 
 }
 
@@ -744,6 +767,7 @@ nav ul{
 
 
 @media screen and (max-width:428px){
+
     .hamburger{
         display: flex;
     }
@@ -790,13 +814,13 @@ nav ul{
 
   .hero-section{
     margin: 1rem;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
   }
 
   .highlight-text{
     font-size: 0.5rem;
     margin-top: 4rem;
-    margin-left: 8rem;
+    margin-left: 4rem;
   }
   .header-text{
     margin-top: 1rem ;
@@ -834,8 +858,8 @@ nav ul{
 }
 
 .features{
-    padding:1.5rem 1rem;
-    margin-bottom: 1rem;
+    /* padding-bottom:1.5rem;
+    margin-bottom: 1rem; */
 }
 
 .first-hdr{
@@ -885,7 +909,10 @@ nav ul{
     font-size:.9rem;
 }
 
-
+.showcase img{
+    height:50vh;
+    padding: 0;
+}
 }
 @media screen and (max-width:390px){
 
