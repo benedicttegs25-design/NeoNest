@@ -400,12 +400,12 @@ nav ul li a:hover::after{
 .feature-cards{
     display: flex;
     flex-wrap: wrap;
+    flex: 2;
     margin: 2rem;
     gap : 10px;
 }
 
-.card-content1{
-    background: linear-gradient(rgba(0, 0, 1, 0.664), rgba(0, 0, 0, 0.397)) , url(https://plus.unsplash.com/premium_photo-1728776080538-653e418842c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHNtYXJ0JTIwbGlnaHRpbmd8ZW58MHx8MHx8fDA%3D);
+.card-content1,.card-content2, .card-content3, .card-content4{
     background-position: center;
     background-size: cover;
     padding: 1rem; 
@@ -413,18 +413,22 @@ nav ul li a:hover::after{
     border-radius: 0.7rem;
     color: var(--Off-White);
     width: 300px;
-    height: 220px;
+    height: 250px;
+}
+.card-content3{
+    background: linear-gradient(rgba(0, 0, 1, 0.664), rgba(0, 0, 0, 0.397)) , url(https://media.istockphoto.com/id/1678741974/photo/mother-and-son-at-home-using-a-smart-thermostat.jpg?b=1&s=612x612&w=0&k=20&c=F-74yQ2TMoO8t30bte263fWEkOr9nvjWxRrM4S5ifmE=);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.card-content4{
+     background: linear-gradient(rgba(0, 0, 1, 0.664), rgba(0, 0, 0, 0.397)) , url(https://plus.unsplash.com/premium_photo-1675016457613-2291390d1bf6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2N0diUyMG1vbml0b3JpbmclMjBzbWFydCUyMGhvbWVzfGVufDB8fDB8fHww);
+     background-position:right;
+}
+.card-content1{
+    background: linear-gradient(rgba(0, 0, 1, 0.664), rgba(0, 0, 0, 0.397)) , url(https://plus.unsplash.com/premium_photo-1728776080538-653e418842c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHNtYXJ0JTIwbGlnaHRpbmd8ZW58MHx8MHx8fDA%3D);
 }
 .card-content2{
     background: linear-gradient(rgba(0, 0, 1, 0.664), rgba(0, 0, 0, 0.397)) , url(https://plus.unsplash.com/premium_photo-1729436833449-225649403fc0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c21hcnQlMjBsb2NrfGVufDB8fDB8fHww);
-    background-position: center;
-    background-size: cover;
-    padding: 1rem; 
-     border: 2.5px solid var(--Slate);
-    border-radius: 0.7rem;
-    color: var(--Off-White);
-    width: 300px;
-    height: 220px;
 }
 .round-border{
     border: 2px solid var(--Emerald-green);
@@ -440,6 +444,18 @@ nav ul li a:hover::after{
 }
 .user-shield-icon{
     font-size: 1.95rem;
+    color: var(--Emerald-green);
+    margin-left: 0.5rem;
+    margin-top: 0.6rem;
+}
+.temp-icon{
+    font-size: 2rem;
+    color: var(--Emerald-green);
+    margin-left: 0.9rem;
+    margin-top: 0.6rem;
+}
+.video-icon{
+    font-size: 2rem;
     color: var(--Emerald-green);
     margin-left: 0.5rem;
     margin-top: 0.6rem;
@@ -462,6 +478,7 @@ nav ul li a:hover::after{
     color: var(--Off-White);
     font-family: "Source Sans 3";
     margin-top: 1rem;
+    max-width: 330px;
 }
 /* large screeen */
 
@@ -773,6 +790,7 @@ nav ul{
 
   .hero-section{
     margin: 1rem;
+    padding-top: 2rem;
   }
 
   .highlight-text{
@@ -799,7 +817,7 @@ nav ul{
     margin-left: 0;
   }
   .security-icon{
- margin-left: 15rem;
+ margin-left: 10rem;
 }
 .compatibility-tag{
     margin-left:0 ;
@@ -817,6 +835,7 @@ nav ul{
 
 .features{
     padding:1.5rem 1rem;
+    margin-bottom: 1rem;
 }
 
 .first-hdr{
@@ -837,16 +856,12 @@ nav ul{
     margin:1rem 0;
 }
 
-.card-content1{
+.card-content1,.card-content2, .card-content3, .card-content4{
     width:90%;
     height:auto;
     min-height:220px;
 }
-.card-content2{
-    width:90%;
-    height:auto;
-    min-height:220px;
-}
+
 
 .round-border{
     width:45px;
@@ -854,7 +869,7 @@ nav ul{
 }
 
 .light-icon,
-.user-shield-icon{
+.user-shield-icon, .temp-icon, .video-icon{
     font-size:1.7rem;
 }
 
@@ -980,7 +995,7 @@ nav ul{
 
     .security-icon{
         display: block;
-        margin-left: 14rem;
+        margin-left: 9.5rem;
         font-size: 1.8rem;
     }
 
@@ -1038,7 +1053,9 @@ nav ul{
 }
 
 .card-content1,
-.card-content2{
+.card-content2, 
+.card-content3,
+.card-content4{
     padding:1rem;
 }
 
@@ -1103,7 +1120,7 @@ nav ul{
     height:80px;
 }
 .security-icon{
-    margin-left: 13rem;
+    margin-left: 9rem;
 }
 
 .google-icon,
@@ -1131,7 +1148,9 @@ nav ul{
 }
 
 .card-content1,
-.card-content2{
+.card-content2,
+.card-content3,
+.card-content4{
     min-height:200px;
 }
 
@@ -1146,7 +1165,17 @@ nav ul{
     margin-top:.45rem;
     margin-left:.55rem;
 }
-
+.temp-icon,
+.video-icon{
+    font-size:1.5rem;
+    margin-top:.45rem;
+    margin-left:0.4rem;
+}
+.temp-icon{
+    font-size:1.5rem;
+    margin-top:.45rem;
+    margin-left:0.6rem;
+}
 .text-ctn h2{
     font-size:1.2rem;
 }
@@ -1260,7 +1289,9 @@ nav ul{
 }
 
 .card-content1,
-.card-content2{
+.card-content2,
+.card-content3,
+.card-content4{
     padding:.8rem;
     min-height:190px;
 }
@@ -1271,7 +1302,9 @@ nav ul{
 }
 
 .light-icon,
-.user-shield-icon{
+.user-shield-icon,
+.temp-icon,
+.video-icon{
     font-size:1.3rem;
     margin-left:.45rem;
     margin-top:.4rem;
