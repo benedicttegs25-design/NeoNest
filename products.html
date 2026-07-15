@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoNest | Products</title>
+    <link rel="icon" type="image/svg+xml" href="neonest2.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bhaiksuki&family=Outfit:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="nav-bar">
+        <div class="logo-ctn">
+            <div class="curved-line"></div>
+            <div class="brand-ctn">
+                <div class="icon-ctn">
+                    <i class="fa-solid fa-house-signal logo-icon"></i>
+                </div>
+                <div class="name-ctn">
+                    <h1>Neo<span>Nest</span></h1>
+                </div>
+            </div>
+        </div>
+        <nav id="nav-menu" class="nav-menu">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="nav-btn">
+                <a href="#">Get Started</a>
+                <i class="fa-solid fa-arrow-right arrow-icon"></i>
+            </button>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- PRODUCTS PAGE -->
+
+    <section class="shop-header">
+        <p class="products-tag">FULL CATALOG</p>
+        <div class="underline"></div>
+        <h1>Shop <span>NeoNest</span></h1>
+        <p class="shop-subtext">
+            Every device, one ecosystem. Browse lighting, security, climate,
+            and energy products built to work together seamlessly.
+        </p>
+    </section>
+
+    <section class="shop">
+        <div class="shop-ctn">
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="lighting">Lighting</button>
+                <button class="filter-btn" data-filter="security">Security</button>
+                <button class="filter-btn" data-filter="climate">Climate</button>
+                <button class="filter-btn" data-filter="energy">Energy</button>
+            </div>
+
+            <div class="product-cards">
+
+                <div class="product" data-category="lighting">
+                    <span class="badge">Best Seller</span>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1707727115439-eec63e83997d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNtYXJ0JTIwaG9tYnVsYnxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                    </div>
+                    <h3>Smart Bulb</h3>
+                    <p>Millions of colors, voice control, and scheduled routines.</p>
+                    <div class="product-footer">
+                        <span class="price">$24</span>
+                        <button class="product-btn">View <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="product" data-category="lighting">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1646753012274-3b5b362379d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODd8fHNtYXJ0JTIwaG9tZSUyMHBsdWd8ZW58MHx8MHx8fDA%3D" alt="">
+                    </div>
+                    <h3>Smart Plug</h3>
+                    <p>Turn any outlet into a smart, schedulable connection point.</p>
+                    <div class="product-footer">
+                        <span class="price">$19</span>
+                        <button class="product-btn">View <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="product" data-category="security">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1670278458296-00ff8a63141e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNtYXJ0JTIwaG9tZSUyMGNhbWVyYXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                    </div>
+                    <h3>Smart Camera</h3>
+                    <p>1080p live streaming with motion alerts and night vision.</p>
+                    <div class="product-footer">
+                        <span class="price">$59</span>
+                        <button class="product-btn">View <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="product" data-category="security">
+                    <div class="product-img">
+                        <i class="fa-solid fa-lock product-icon"></i>
+                    </div>
+                    <h3>Smart Lock</h3>
+                    <p>Keyless entry with remote access and guest permissions.</p>
+                    <div class="product-footer">
+                        <span class="price">$99</span>
+                        <button class="product-btn">View <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="product" data-category="climate">
+                    <span class="badge">New</span>
+                    <div class="product-img">
+                        <i class="fa-solid fa-temperature-half product-icon"></i>
+                    </div>
+                    <h3>Smart Thermostat</h3>
+                    <p>Learns your habits and optimizes energy use automatically.</p>
+                    <div class="product-footer">
+                        <span class="price">$89</span>
+                        <button class="product-btn">View <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="product" data-category="climate">
+                    <div class="product-img">
+                        <i class="fa-solid fa-fan product-icon"></i>
+                    </div>
+                    <h3>Smart Humidifier</h3>
+                    <p>Automatic humidity balancing tuned to every room.</p>
+                    <div class="product-footer">
+                        <span class="price">$45</span>
+                        <button class="product-btn">View <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="product" data-category="energy">
+                    <div class="product-img">
+                        <i class="fa-solid fa-bolt product-icon"></i>
+                    </div>
+                    <h3>Smart Energy Monitor</h3>
+                    <p>Track consumption in real time and cut wasted electricity.</p>
+                    <div class="product-footer">
+                        <span class="price">$69</span>
+                        <button class="product-btn">View <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="product" data-category="energy">
+                    <div class="product-img">
+                        <i class="fa-solid fa-solar-panel product-icon"></i>
+                    </div>
+                    <h3>Solar Bridge</h3>
+                    <p>Connect solar input directly into your NeoNest ecosystem.</p>
+                    <div class="product-footer">
+                        <span class="price">$149</span>
+                        <button class="product-btn">View <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="product" data-category="security">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1621685634155-dcb444e2ec98?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fHNtYXJ0JTIwaG9tZSUyMGNwdXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                    </div>
+                    <h3>NeoNest Hub</h3>
+                    <p>The central brain that connects every device in your home.</p>
+                    <div class="product-footer">
+                        <span class="price">$129</span>
+                        <button class="product-btn">View <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="no-results">No products match this filter yet.</p>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>
