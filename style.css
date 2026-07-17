@@ -760,6 +760,148 @@ nav ul li a:hover::after{
     color: var(--Charcoal);
 }
 
+
+
+
+#modal , #modal2, #modal3, #modal4, #modal5, #modal6{
+   position: fixed;
+   top:1rem;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   /* display: flex; */
+   /* overflow-y: auto;
+     /* Firefox 
+    scrollbar-width: 20px;
+    scrollbar-color:   var(--Emerald-green) var(--Off-White); */
+    z-index: 999999;
+    border-radius: 4px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.486);
+    backdrop-filter: blur(5px);
+
+
+}
+#modal:not(.hidden) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hidden{
+    display: none;
+}
+
+
+/* Chrome/Edge/Safari */
+.modal-content::-webkit-scrollbar {
+    width: 15px;
+}
+.modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--Emerald-green);
+    border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #016141;
+}
+.modal-content{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    height: 75vh;
+    margin-left: 4rem;
+    width: 100vh;
+    background: #03070e;
+    border: 2px solid var(--Slate);
+    overflow-y: auto;
+     /* Firefox */
+    scrollbar-width: 20px;
+    scrollbar-color:   var(--Emerald-green) var(--Off-White);
+    animation: fadeIn .2s ease-out , slideUp .2s ease-out;
+    cursor: pointer;
+    display: grid;
+   
+}
+
+.modal-content img{
+    height: 150px;
+    width: 150px;
+    border-radius: 20px ;
+}
+.modal-content h1{
+    color: var(--Emerald-green);
+    font-family: "Source Sans 3";
+    font-weight: 300;
+    text-align: center;
+    font-size: 2rem;
+}
+.modal-content h2{
+     color: var(--Off-White);
+    font-family: "Source Sans 3";
+    font-weight: 300;
+    text-align: left;
+    font-size: 1.6rem;
+}
+.tagline{
+    font-family: "Noto Sans Bhaiksuki";
+    color: var(--Off-White);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 100;
+    margin-top:0.5rem;
+}
+.description{
+     font-family: "outfit";
+    color: #eee;
+    font-size: 0.9rem;
+    font-weight: 100;
+    margin-top: 0.5rem;
+}
+ul{
+    font-size: 1rem;
+    color: #F9FAFB;
+    font-family: "Outfit";
+    font-weight: 200;
+    margin-top: 0.5rem;
+}
+.price2{
+     font-family: "Noto Sans Bhaiksuki";
+    color: var(--Emerald-green);
+    font-size: 1.3rem;
+    margin-top: 0.4rem;
+    text-align: center;
+}
+#closeBtn, #closeBtn2, #closeBtn3, #closeBtn4, #closeBtn5, #closeBtn6{
+    /* padding: 20px; */
+    font-size: 0.75rem;
+    color: #F9FAFB;
+    background-color: #10B981;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-left: 0; /* remove the 35rem */
+    border: none;
+    width:30px;
+    height:30px;
+    cursor: pointer;
+}
+
+#closeBtn:hover, #closeBtn2:hover, #closeBtn3:hover, #closeBtn4:hover, #closeBtn5:hover, #closeBtn6:hover{
+    background-color: #016141;
+    transition: .3s ease-in-out;
+    transform: translateY(-5px);
+}
+
+
+.modal-content {
+    position: relative; /* add this */
+}
+
+
 /* large screeen */
 
 @media screen and (max-width:1024px){
@@ -852,7 +994,7 @@ nav ul{
 }
 
 .card-content1,
-.card-content2{
+.card-content2, .card-content3, .card-content4, .card-content5{
     width:280px;
     height:220px;
 }
@@ -884,7 +1026,22 @@ nav ul{
     width:280px;
 }
 
+  .modal-content {
+        width: 90vw;
+        margin-left: 0;
+        height: 80vh;
+    }
 
+    #closeBtn, #closeBtn2, #closeBtn3, #closeBtn4, #closeBtn5, #closeBtn6 {
+        margin-left: 0;
+        top: 1.5rem;
+        right: 1.5rem;
+        left: auto;
+    }
+
+    .product {
+        width: 240px;
+    }
 
 }
 
@@ -1083,6 +1240,33 @@ nav ul{
     font-size:2.2rem;
 }
 
+.product-cards {
+        gap: 1rem;
+    }
+
+    .product {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .modal-content {
+        width: 92vw;
+        height: 85vh;
+        padding: 1rem;
+    }
+
+    #modal, #modal2, #modal3, #modal4, #modal5, #modal6 {
+        padding: 10px;
+        top: 0;
+    }
+
+    .modal-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
 
 }
 
@@ -1273,6 +1457,25 @@ nav ul{
     font-size:.9rem;
 }
 
+ .modal-content {
+        width: 90vw;
+        height: 80vh;
+        padding: 0.8rem;
+        margin-left: 0%;
+    }
+
+    .modal-content img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #closeBtn, #closeBtn2, #closeBtn3, #closeBtn4, #closeBtn5, #closeBtn6 {
+        top: 0.8rem;
+        right: 0.8rem;
+        width: 26px;
+        height: 26px;
+        font-size:0.7rem;
+    }
 
 }
 
@@ -1491,7 +1694,21 @@ nav ul{
     font-size:.85rem;
 }
 
+    .modal-content h1 {
+        font-size: 1.4rem;
+    }
 
+    .modal-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .tagline {
+        font-size: 1.05rem;
+    }
+
+    .description, ul {
+        font-size: 0.85rem;
+    }
 
 }
 
@@ -1643,9 +1860,51 @@ nav ul{
     font-size:.8rem;
 }
 
+.modal-content h1 {
+        font-size: 1.4rem;
+    }
 
+    .modal-content h2 {
+        font-size: 1.3rem;
+    }
 
+    .tagline {
+        font-size: 1.05rem;
+    }
+
+    .description, ul {
+        font-size: 0.85rem;
+    }
+     .modal-content {
+        width: 96vw;
+        height: 90vh;
+        padding: 0.6rem;
+    }
+
+    .modal-content img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .product {
+        padding: 1rem;
+    }
+
+    .product-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .product-img img {
+        width: 80px;
+        height: 80px;
+    }
 }
+
+/* Small phones */
+   
+
+
 
 
 
@@ -1813,7 +2072,24 @@ nav ul{
     line-height:1.5;
 }
 
+.modal-content {
+        width: 98vw;
+        padding: 0.5rem;
+    }
 
+    .modal-content h1 {
+        font-size: 1.2rem;
+    }
+
+    .tagline {
+        font-size: 0.95rem;
+    }
+
+    #closeBtn, #closeBtn2, #closeBtn3, #closeBtn4, #closeBtn5, #closeBtn6 {
+        width: 24px;
+        height: 24px;
+        font-size: 0.65rem;
+    }
 
 }
 
