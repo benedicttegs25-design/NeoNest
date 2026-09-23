@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NeoNest</title>
+    <link rel="icon" type="image/svg+xml" href="neonest2.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bhaiksuki&family=Outfit:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== ABOUT PAGE ONLY — reuses variables from style.css ===== */
+
+        .about-hero{
+            background:
+              linear-gradient(rgba(15,23,42,.65), rgba(15,23,42,.5)),
+              url("bg-house.png");
+            background-size: cover;
+            background-position: center;
+            min-height: 55vh;
+            padding-top: 120px;
+            padding-bottom: 3rem;
+            text-align: center;
+        }
+        .about-hero-tag{
+            display: inline-block;
+            background: #10B98130;
+            border: 1px solid var(--Mint);
+            border-radius: 0.5rem;
+            color: var(--Off-White);
+            font-size: 0.75rem;
+            font-family: "Source Sans 3";
+            padding: .4rem .8rem;
+            margin-bottom: 1.25rem;
+        }
+        .about-hero h1{
+            color: var(--Off-White);
+            font-family: "Noto Sans Bhaiksuki";
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .about-hero p{
+            color: var(--Off-White);
+            font-family: "Outfit";
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 640px;
+            margin: 0 auto;
+            opacity: .9;
+        }
+
+        /* STORY */
+        .story{
+            background: var(--Off-White);
+            padding: 5rem 1.5rem;
+        }
+        .story-ctn{
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .story-img{
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(16,185,129,.15);
+        }
+        .story-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .story-text .products-tag{ text-align: left; margin-left: 0; padding-top: 0; }
+        .story-text .underline{ margin: 0.5rem 0 1.25rem; }
+        .story-text h2{
+            color: var(--Deep);
+            font-family: "Noto Sans Bhaiksuki";
+            font-weight: 300;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        .story-text h2 span{ color: var(--Emerald-green); }
+        .story-text p{
+            color: #4B5563;
+            font-family: "Outfit";
+            font-size: 1.05rem;
+            line-height: 1.85;
+            margin-bottom: 1rem;
+        }
+
+        /* VALUES */
+        .values{
+            background: var(--Panel);
+            padding: 5rem 1.5rem;
+        }
+        .values-ctn{
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .values-ctn .underline{ margin: 0.5rem auto 1.5rem; }
+        .values-ctn h2{
+            color: var(--Deep);
+            font-family: "Noto Sans Bhaiksuki";
+            font-weight: 300;
+            font-size: 2.4rem;
+            margin-bottom: .5rem;
+        }
+        .values-ctn h2 span{ color: var(--Emerald-green); }
+        .values-desc{
+            color: #4B5563;
+            font-family: "Outfit";
+            max-width: 640px;
+            margin: 0.5rem auto 3rem;
+            line-height: 1.8;
+        }
+        .values-grid{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        .value-card{
+            background: var(--Off-White);
+            border: 1px solid #E5E7EB;
+            border-radius: 16px;
+            padding: 2rem 1.25rem;
+            text-align: center;
+            transition: transform .2s ease, border-color .2s ease;
+            box-shadow: 0 4px 16px rgba(16,185,129,.08);
+        }
+        .value-card:hover{
+            transform: translateY(-5px);
+            border-color: var(--Emerald-green);
+        }
+        .value-card i{
+            font-size: 2rem;
+            color: var(--Emerald-green);
+            background: rgba(16,185,129,.12);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+        }
+        .value-card h3{
+            color: var(--Deep);
+            font-family: "Source Sans 3";
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: .5rem;
+        }
+        .value-card p{
+            color: #6B7280;
+            font-family: "Outfit";
+            font-size: .9rem;
+            line-height: 1.6;
+        }
+
+        /* JOURNEY / MILESTONES */
+        .journey{
+            background: var(--Off-White);
+            padding: 5rem 1.5rem;
+        }
+        .journey-ctn{
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .journey-ctn .underline{ margin: 0.5rem auto 1.5rem; }
+        .journey-ctn h2{
+            color: var(--Deep);
+            font-family: "Noto Sans Bhaiksuki";
+            font-weight: 300;
+            font-size: 2.4rem;
+            margin-bottom: 3rem;
+        }
+        .journey-ctn h2 span{ color: var(--Emerald-green); }
+        .timeline{
+            position: relative;
+            text-align: left;
+            padding-left: 2rem;
+        }
+        .timeline::before{
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 6px;
+            bottom: 6px;
+            width: 2px;
+            background: linear-gradient(var(--Emerald-green), var(--Mint));
+        }
+        .timeline-item{
+            position: relative;
+            padding-bottom: 2.5rem;
+        }
+        .timeline-item:last-child{ padding-bottom: 0; }
+        .timeline-item::before{
+            content: "";
+            position: absolute;
+            left: -2rem;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--Emerald-green);
+            box-shadow: 0 0 0 4px rgba(16,185,129,.18);
+        }
+        .timeline-year{
+            color: var(--Emerald-green);
+            font-family: "Source Sans 3";
+            font-weight: 700;
+            font-size: .95rem;
+            margin-bottom: .25rem;
+        }
+        .timeline-item h4{
+            color: var(--Deep);
+            font-family: "Source Sans 3";
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: .35rem;
+        }
+        .timeline-item p{
+            color: #6B7280;
+            font-family: "Outfit";
+            font-size: .95rem;
+            line-height: 1.7;
+        }
+
+        /* RESPONSIVE */
+        @media screen and (max-width: 1024px){
+            .values-grid, .team-grid{ grid-template-columns: repeat(2, 1fr); }
+        }
+        @media screen and (max-width: 768px){
+            .story-ctn{ grid-template-columns: 1fr; }
+            .about-hero h1{ font-size: 2.2rem; }
+        }
+        @media screen and (max-width: 428px){
+            .values-grid, .team-grid{ grid-template-columns: 1fr; }
+            .about-hero{ padding-top: 100px; }
+            .about-hero h1{ font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+        <div class="nav-bar" style="min-height:auto; padding: 1rem 1.5rem;">
+            <div class="logo-ctn">
+                <div class="curved-line"></div>
+                <div class="brand-ctn">
+                    <div class="icon-ctn">
+                        <i class="fa-solid fa-house-signal logo-icon"></i>
+                    </div>
+                    <div class="name-ctn">
+                        <h1>Neo<span>Nest</span></h1>
+                    </div>
+                </div>
+            </div>
+            <nav id="nav-menu" class="nav-menu">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!-- <button class="nav-btn">
+                    <a href="#">Get Started</a>
+                    <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </button>
+            </nav> -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+    <section class="about-hero">
+        <span class="about-hero-tag"><i class="fa-solid fa-house-signal"></i>&nbsp; WHO WE ARE</span>
+        <h1>Building Homes That Think Ahead</h1>
+        <p>NeoNest started with a simple idea: a home should adapt to you, not the other way around. Today we help thousands of households live smarter, safer, and more efficiently.</p>
+    </section>
+
+    <section class="story">
+        <div class="story-ctn">
+            <div class="story-img">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=700&auto=format&fit=crop&q=80" alt="Smart home living room">
+            </div>
+            <div class="story-text">
+                <p class="products-tag">OUR STORY</p>
+                <div class="underline"></div>
+                <h2>From One Idea to <span>50,000+ Homes</span></h2>
+                <p>NeoNest was founded to remove the friction from smart home technology. Instead of juggling five different apps for lights, locks, and cameras, we built one connected ecosystem that just works.</p>
+                <p>What started as a single smart plug has grown into a full lineup of hubs, sensors, lighting, and security devices — trusted by homeowners across Nigeria and beyond.</p>
+                <p>We're still driven by the same goal we started with: make every home a little smarter, a little safer, and a lot more comfortable.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values">
+        <div class="values-ctn">
+            <p class="products-tag">WHAT DRIVES US</p>
+            <div class="underline"></div>
+            <h2>Our Core <span>Values</span></h2>
+            <p class="values-desc">Every product we build is measured against the same four principles.</p>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>We build for how people actually live, not just for what's technically possible.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Reliability</h3>
+                    <p>A smart home that fails when you need it most isn't smart. We test for the edge cases.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <h3>Simplicity</h3>
+                    <p>Setup should take minutes, not a manual. If it's confusing, we haven't finished the job.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fa-solid fa-leaf"></i>
+                    <h3>Sustainability</h3>
+                    <p>Smarter energy use isn't just a feature — it's a responsibility we take seriously.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="journey">
+        <div class="journey-ctn">
+            <p class="products-tag">HOW FAR WE'VE COME</p>
+            <div class="underline"></div>
+            <h2>Our <span>Journey</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2021</div>
+                    <h4>NeoNest Founded</h4>
+                    <p>Launched with a single product — the NeoNest Plug — and a mission to make smart homes simple.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <h4>The Hub Ecosystem Launches</h4>
+                    <p>Introduced the NeoNest Hub, connecting lighting, security, and climate under one app.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <h4>Matter & Voice Integration</h4>
+                    <p>Added full support for Google Home, Apple Home, Alexa, and the Matter standard.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <h4>50,000 Homes Connected</h4>
+                    <p>Crossed 50,000 installed homes with an average 35% reduction in household energy use.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Today</div>
+                    <h4>Building What's Next</h4>
+                    <p>Expanding the lineup with smarter sensors, deeper automations, and wider regional availability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="final-cta-ctn">
+            <i class="fa-solid fa-house-signal cta-icon"></i>
+            <h2 class="cta-hdr">Ready to Join <span>the NeoNest Family?</span></h2>
+            <p class="cta-text">
+                Explore the lineup and start building a home that works with you, not against you.
+            </p>
+            <div class="cta-btns">
+                <a href="products.html"><button class="ctn1">Browse Products <i class="fa-solid fa-arrow-right"></i></button></a>
+                <a href="index.html"><button class="ctn2">Back to Home</button></a>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+    <div class="footer-ctn">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="brand-ctn">
+                    <div class="icon-ctn">
+                        <i class="fa-solid fa-house-signal logo-icon"></i>
+                    </div>
+                    <div class="name-ctn">
+                        <h1>Neo<span>Nest</span></h1>
+                    </div>
+                </div>
+                <p>Smart technology for better living. One ecosystem for lighting, security, climate, and more.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="products.html">NeoNest Hub</a></li>
+                    <li><a href="products.html">NeoNest Glow</a></li>
+                    <li><a href="products.html">NeoNest Eye</a></li>
+                    <li><a href="products.html">NeoNest Guard</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Get product news and smart home tips in your inbox.</p>
+                <form class="newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="footer-year"></span> NeoNest. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

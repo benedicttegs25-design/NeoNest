@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | NeoNest</title>
+    <link rel="icon" type="image/svg+xml" href="neonest2.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bhaiksuki&family=Outfit:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== CONTACT PAGE ONLY — reuses variables from style.css ===== */
+
+        .contact-hero{
+            background:
+              linear-gradient(rgba(15,23,42,.65), rgba(15,23,42,.5)),
+              url(https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=80);
+            background-size: cover;
+            background-position: center;
+            min-height: 42vh;
+            padding-top: 120px;
+            padding-bottom: 2.5rem;
+            text-align: center;
+        }
+        .contact-hero-tag{
+            display: inline-block;
+            background: #10B98130;
+            border: 1px solid var(--Mint);
+            border-radius: 0.5rem;
+            color: var(--Off-White);
+            font-size: 0.75rem;
+            font-family: "Source Sans 3";
+            padding: .4rem .8rem;
+            margin-bottom: 1.25rem;
+        }
+        .contact-hero h1{
+            color: var(--Off-White);
+            font-family: "Noto Sans Bhaiksuki";
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+        .contact-hero p{
+            color: var(--Off-White);
+            font-family: "Outfit";
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: .9;
+        }
+
+        .contact-section{
+            background: var(--Off-White);
+            padding: 5rem 1.5rem;
+        }
+        .contact-grid{
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        /* INFO CARDS */
+        .contact-info{
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .info-card{
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: var(--Panel);
+            border-radius: 14px;
+            padding: 1.5rem;
+        }
+        .info-card i{
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            border-radius: 50%;
+            background: var(--Off-White);
+            color: var(--Emerald-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+        .info-card h4{
+            color: var(--Deep);
+            font-family: "Source Sans 3";
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: .3rem;
+        }
+        .info-card p{
+            color: #4B5563;
+            font-family: "Outfit";
+            font-size: .9rem;
+            line-height: 1.6;
+        }
+        .info-card a{
+            color: #4B5563;
+            text-decoration: none;
+        }
+        .info-card a:hover{ color: var(--Emerald-green); }
+
+        .info-socials{
+            display: flex;
+            gap: .75rem;
+            margin-top: .5rem;
+        }
+        .info-socials a{
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid #E5E7EB;
+            color: var(--Deep);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: .2s ease;
+        }
+        .info-socials a:hover{
+            background: var(--Emerald-green);
+            border-color: var(--Emerald-green);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* FORM */
+        .contact-form-ctn{
+            background: var(--Off-White);
+            border: 1px solid #E5E7EB;
+            border-radius: 16px;
+            padding: 2.25rem;
+            box-shadow: 0 4px 20px rgba(16,185,129,.08);
+        }
+        .contact-form-ctn h2{
+            color: var(--Deep);
+            font-family: "Noto Sans Bhaiksuki";
+            font-weight: 300;
+            font-size: 1.75rem;
+            margin-bottom: .4rem;
+        }
+        .contact-form-ctn h2 span{ color: var(--Emerald-green); }
+        .contact-form-ctn > p{
+            color: #6B7280;
+            font-family: "Outfit";
+            font-size: .9rem;
+            margin-bottom: 1.75rem;
+        }
+        .form-row{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+        .form-group{
+            margin-bottom: 1.25rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label{
+            color: var(--Deep);
+            font-family: "Source Sans 3";
+            font-size: .85rem;
+            font-weight: 600;
+            margin-bottom: .5rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea{
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            padding: .8rem 1rem;
+            font-family: "Outfit";
+            font-size: .95rem;
+            color: var(--Deep);
+            background: var(--Off-White);
+            outline: none;
+            transition: border-color .2s ease, box-shadow .2s ease;
+        }
+        .form-group textarea{
+            resize: vertical;
+            min-height: 130px;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus{
+            border-color: var(--Emerald-green);
+            box-shadow: 0 0 0 3px rgba(16,185,129,.15);
+        }
+        .form-error{
+            color: #DC2626;
+            font-size: .78rem;
+            margin-top: .35rem;
+            display: none;
+        }
+        .form-group.invalid input,
+        .form-group.invalid textarea,
+        .form-group.invalid select{
+            border-color: #DC2626;
+        }
+        .form-group.invalid .form-error{ display: block; }
+
+        .contact-submit{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .6rem;
+            width: 100%;
+            background: var(--Emerald-green);
+            color: #fff;
+            border: none;
+            padding: .9rem 1rem;
+            border-radius: 8px;
+            font-family: "Source Sans 3";
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color .2s ease, transform .15s ease;
+        }
+        .contact-submit:hover{ background: #059669; }
+        .contact-submit:disabled{
+            opacity: .7;
+            cursor: default;
+        }
+
+        .form-success{
+            display: none;
+            align-items: center;
+            gap: .6rem;
+            background: rgba(16,185,129,.12);
+            border: 1px solid var(--Emerald-green);
+            color: #065F46;
+            border-radius: 8px;
+            padding: .9rem 1rem;
+            font-family: "Outfit";
+            font-size: .9rem;
+            margin-bottom: 1.5rem;
+        }
+        .form-success.show{ display: flex; }
+        .form-success i{ color: var(--Emerald-green); font-size: 1.1rem; }
+
+        @media screen and (max-width: 900px){
+            .contact-grid{ grid-template-columns: 1fr; }
+        }
+        @media screen and (max-width: 480px){
+            .form-row{ grid-template-columns: 1fr; }
+            .contact-hero h1{ font-size: 2rem; }
+            .contact-form-ctn{ padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+   
+        <div class="nav-bar" style="min-height:auto; padding: 1rem 1.5rem;">
+            <div class="logo-ctn">
+                <div class="curved-line"></div>
+                <div class="brand-ctn">
+                    <div class="icon-ctn">
+                        <i class="fa-solid fa-house-signal logo-icon"></i>
+                    </div>
+                    <div class="name-ctn">
+                        <h1>Neo<span>Nest</span></h1>
+                    </div>
+                </div>
+            </div>
+            <nav id="nav-menu" class="nav-menu">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!-- <button class="nav-btn">
+                    <a href="#">Get Started</a>
+                    <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </button> -->
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+    <section class="contact-hero">
+        <span class="contact-hero-tag"><i class="fa-solid fa-comments"></i>&nbsp; GET IN TOUCH</span>
+        <h1>We'd Love to Hear From You</h1>
+        <p>Questions about a product, an order, or a partnership? Send us a message and our team will get back to you within one business day.</p>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-grid">
+
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Visit Us</h4>
+                        <p>14 Admiralty Way, Lekki Phase 1, Lagos, Nigeria</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p><a href="tel:+2349016616853">09016616853</a></p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p><a href="mailto:support@neonest.com">support@neonest.com</a></p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h4>Support Hours</h4>
+                        <p>Mon – Fri: 9am – 6pm<br>Sat: 10am – 2pm</p>
+                        <div class="info-socials">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-ctn">
+                <h2>Send Us a <span>Message</span></h2>
+                <p>Fill out the form and we'll respond as soon as we can.</p>
+
+                <div class="form-success" id="formSuccess">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Thanks! Your message has been sent — we'll be in touch shortly.</span>
+                </div>
+
+                <form id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group" data-field="name">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Jane Doe">
+                            <span class="form-error">Please enter your name.</span>
+                        </div>
+                        <div class="form-group" data-field="email">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="jane@example.com">
+                            <span class="form-error">Please enter a valid email.</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group" data-field="phone">
+                            <label for="phone">Phone <span style="font-weight:400;color:#9CA3AF;">(optional)</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="+234 800 000 0000">
+                        </div>
+                        <div class="form-group" data-field="subject">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="">Select a topic</option>
+                                <option value="order">Order Support</option>
+                                <option value="product">Product Question</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="form-error">Please choose a subject.</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group" data-field="message">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="How can we help?"></textarea>
+                        <span class="form-error">Please enter a message.</span>
+                    </div>
+
+                    <button type="submit" class="contact-submit" id="contactSubmit">
+                        <span id="contactSubmitLabel">Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form: validates, then POSTs to Formspree, which forwards
+        // the message to bigteggs26@gmail.com. No page reload.
+        (function () {
+            const form = document.getElementById('contactForm');
+            const successBox = document.getElementById('formSuccess');
+            const submitBtn = document.getElementById('contactSubmit');
+            const submitLabel = document.getElementById('contactSubmitLabel');
+
+            // ⬇️ Replace with your real Formspree form ID (from formspree.io,
+            // the part after "/f/" in the endpoint they give you).
+            const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xyezjleq';
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            function setInvalid(field, isInvalid) {
+                const group = form.querySelector(`[data-field="${field}"]`);
+                if (group) group.classList.toggle('invalid', isInvalid);
+            }
+
+            function validate() {
+                let valid = true;
+
+                const name = form.name.value.trim();
+                setInvalid('name', !name);
+                if (!name) valid = false;
+
+                const email = form.email.value.trim();
+                const emailOk = emailPattern.test(email);
+                setInvalid('email', !emailOk);
+                if (!emailOk) valid = false;
+
+                const subject = form.subject.value;
+                setInvalid('subject', !subject);
+                if (!subject) valid = false;
+
+                const message = form.message.value.trim();
+                setInvalid('message', !message);
+                if (!message) valid = false;
+
+                return valid;
+            }
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                successBox.classList.remove('show');
+
+                if (!validate()) return;
+
+                submitBtn.disabled = true;
+                submitLabel.textContent = 'Sending...';
+
+                try {
+                    const response = await fetch(FORMSPREE_ENDPOINT, {
+                        method: 'POST',
+                        headers: { 'Accept': 'application/json' },
+                        body: new FormData(form)
+                    });
+
+                    if (!response.ok) throw new Error('Formspree request failed');
+
+                    successBox.querySelector('span').textContent =
+                        "Thanks! Your message has been sent — we'll be in touch shortly.";
+                    successBox.classList.add('show');
+                    form.reset();
+                    form.querySelectorAll('.form-group.invalid').forEach(g => g.classList.remove('invalid'));
+                    successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } catch (err) {
+                    successBox.querySelector('span').textContent =
+                        "Something went wrong sending your message. Please try again, or email support@neonest.com directly.";
+                    successBox.style.background = 'rgba(220,38,38,.1)';
+                    successBox.style.borderColor = '#DC2626';
+                    successBox.style.color = '#991B1B';
+                    successBox.classList.add('show');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitLabel.textContent = 'Send Message';
+                }
+            });
+
+            // clear the red state as soon as the user starts fixing a field
+            ['name', 'email', 'subject', 'message'].forEach(field => {
+                const el = form[field];
+                if (el) el.addEventListener('input', () => setInvalid(field, false));
+            });
+        })();
+    </script>
+</body>
+</html>
